@@ -633,6 +633,7 @@ h2 {
 
 .date-box.highlight {
   border: 2px solid #c084fc;
+    position: sticky;
 }
 
 .red {
@@ -1222,4 +1223,111 @@ h2 {
 /* OPTIONAL: Add subtle section polish */
 .sponsor-section {
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+}
+  /* news and announcements section /*
+/* Main Section */
+.news-section {
+    display: flex;
+    justify-content: space-between;
+     color: #2563eb;
+    align-items: center;
+    padding: 60px 80px;
+    gap: 50px;
+}
+
+/* LEFT SIDE */
+.left {
+    width: 40%;
+}
+
+.left h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.left p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, orange, #ffcc80);
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* RIGHT SIDE */
+.right {
+    width: 60%;
+}
+
+/* Scroll Box */
+.news-box {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Scrolling Content */
+.news-content {
+    display: flex;
+    flex-direction: column;
+    animation: scroll-up 15s linear infinite;
+}
+
+/* News Card */
+.news-card {
+    background: #eaeaea;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.news-card:hover {
+    transform: translateX(5px);
+}
+
+/* Category + Date */
+.meta {
+    font-size: 12px;
+    color: orange;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Text */
+.news-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111;
+}
+
+/* Animation */
+@keyframes scroll-up {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+
+/* Pause on hover */
+.news-box:hover .news-content {
+    animation-play-state: paused;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+    .news-section {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
 }
